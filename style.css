@@ -1,0 +1,50 @@
+body {
+    animation: gradientBackground 5s ease infinite;
+    background: #ff7e5f;
+    background-color:linear-gradient(to right, #ff7e5f, #feb47b);;
+}
+@keyframes gradientBackground {
+    0% { background: #31999b; }
+    50% { background: #307b8c; }
+    100% { background: #3c87b3; }
+}
+
+/*Nav Bar*/
+/*header*/
+.mainHeader h1{
+    text-align: left;
+    color: hsl(191, 20%, 16%);
+}
+.navbar ul{
+    list-style-type: none;
+    background-color: hsl(192, 81%, 51%);
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+.navbar a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+}
+.navbar a:hover{
+    background-color:  hsla(81, 60%, 43%, 0.705);
+}
+.navbar li{
+    float: left;
+}
+
+
+/*mainImage*/
+
+
+
+/*Footer*/
+.mainFooter {
+    display: block;
+    clear: both;
+    background-color: hsl(192, 81%, 51%);
+    text-align: center;
+    padding: 25px;
+}

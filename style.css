@@ -1,50 +1,288 @@
-body {
-    animation: gradientBackground 5s ease infinite;
-    background: #ff7e5f;
-    background-color:linear-gradient(to right, #ff7e5f, #feb47b);;
-}
-@keyframes gradientBackground {
-    0% { background: #31999b; }
-    50% { background: #307b8c; }
-    100% { background: #3c87b3; }
+html , body {
+    margin: 0 ;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    background: linear-gradient(to right, #1e3c72 ,2a5298 );
+    animation: gradientBackground 5s infinite alternate;
+    color: white;
+    position: relative;
 }
 
-/*Nav Bar*/
-/*header*/
-.mainHeader h1{
-    text-align: left;
-    color: hsl(191, 20%, 16%);
+/*Particle background animation*/
+@keyframes gradientBackground {
+    0% { background: #1e3c72; }
+    50% { background: #1b4965; }
+    100% { background: #2a5298 ; }
 }
-.navbar ul{
-    list-style-type: none;
-    background-color: hsl(192, 81%, 51%);
+#particles-js{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0 ;
+    left: 0;
+    z-index: 0;
+}
+
+
+/*Nav Bar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+    padding: 10px 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+
+}
+.navbar h2{
     padding: 0px;
     margin: 0px;
-    overflow: hidden;
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #ffcc70;
+    text-align: left;
+    font-weight: bold;
+    letter-spacing: -2px;
+    position: relative;
+    z-index: 1;
+    padding-left: 20px;
 }
-.navbar a{
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    padding: 10px;
-    display: block;
-}
-.navbar a:hover{
-    background-color:  hsla(81, 60%, 43%, 0.705);
+.navbar ul{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
 }
 .navbar li{
-    float: left;
+    margin-left: 25px;
+}
+.navbar a{
+    text-decoration: none;
+    color: #ffcc70;
+    font-size: 25px;
+    padding: 10px;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+.navbar a:hover {
+    background-color: rgba(255, 204, 112, 0.3); 
+}
+.navbar img {
+    height: 65px;
+    width: auto;
 }
 
 
-/*mainImage*/
+/*Main Header */
+.mainHeader{
+    text-align: center ;
+    padding-top: 120px;
+    position: relative;
+    z-index: 1;
+}
+
+
+
+/*Main Body*/
+.mainContent {
+    margin-top: 150px; 
+}
+
+
+
+/*About me Div*/
+.divAM{
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+    position: relative;
+    z-index: 0;
+}
+.aboutMe h2{
+    text-align: left;
+    font-size: 36px;
+    color: #ffcc70;
+}
+.aboutMe p{
+    text-align: left;
+    font-size: 24px;
+    line-height: 1.6;
+    margin: 20px 0;
+}
+#img1{
+    float: right;
+    margin-left: 10px;
+}
+/*END About me Div*/
+
+
+/*Skills Div*/
+.divSkills {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    margin: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+}
+.skills h2 {
+    font-size: 36px;
+    color: #ffcc70;
+    margin-bottom: 20px;
+}
+.skill-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 10px 0;
+    transition: transform 0.3s ease-in-out;
+}
+.skill-card:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.568);
+}
+
+.skill-card img {
+    height: 50px;
+    width: auto;
+    margin-left: 40px;
+}
+.skill-card #javaimg {
+    height: 70px;
+    width: auto;
+    margin-left: 0px;
+}
+.skill-card p {
+    flex: 1;
+    font-size: 24px;
+    color: white;
+}
+.skill-level {
+    font-size: 18px;
+    color: #ffcc70;
+    font-weight: bold;
+}
+/*END skills Div*/
+
+
+/*Contact me Div*/
+.divCM{
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+    position: relative;
+    z-index: 0;
+}
+.contact h2 {
+    padding: 10px;
+    text-align: center;
+    font-size: 36px;
+    color: #ffcc70;
+}
+.contact a {
+    text-align: center;
+    font-size: 27px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #63b3f5;
+}
+.contact p {
+    text-align: center;
+    font-size: 24px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.contact a:hover {
+    text-decoration: underline;
+    background-color: aliceblue;
+}
+.divCM #img2{
+    float: left;
+    margin-left: 10px;
+}
+.icons{
+    text-align: center;
+}
+.icons a{
+    text-decoration: none;
+    margin-right: 20px;
+}
+/*END Contact me Div*/
+
+
+
+
+/*END main body*/
+
+
+
+/* Gallery Section */
+.gallery-section {
+    text-align: center;
+    padding: 30px;
+}
+.gallery-item {
+    margin-bottom: 20px;
+}
+.gallery-item img {
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+/*END Gallery Style*/
 
 
 
 /*Footer*/
 .mainFooter {
-    display: block;
-    clear: both;
-    background-color: hsl(192, 81%, 51%);
     text-align: center;
-    padding: 25px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    margin: 10px;
+    position: relative;
+    z-index: 0;
+}
+/* END Footer*/
+
+/*Mobile Phone//when screen width is less than or equal to 600px*/
+@media screen and (max-width:600px) {
+    aside,section, article{
+        width: 100%;
+    }
+@media (max-width: 768px) {
+        nav ul {
+            flex-direction: column;
+        }
+    
+        .skills-list {
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .gallery-item img {
+            width: 100%;
+        }
+    }
 }

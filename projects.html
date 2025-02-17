@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="images/png" href="images/brenware-high-resolution-logo-transparent (1).png" >
+    <title>Projects</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+</head>
+<body>
+    <div id="particles-js"></div>
+
+    <header>
+        <nav class="navbar">
+            <h2> <img src="images/brenware-high-resolution-logo-transparent (1).png"></h2>
+            <ul>
+                <li><a href="main.html">Home</a></li>
+                <li><a href="projects.html" >Projects</a></li>
+                <li><a href="gallery.html" >Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="mainContent">
+
+        <div class="divSkills">
+            <section class="skills">
+                <h2>Programming Languages</h2>
+                <div class="skill-card">
+                    <img id="javaimg" src="images/Java-Logo.png" alt="Java Logo">
+                    <p>Java</p>
+                    <span class="skill-level">Proficient | 3 years</span>
+                </div>
+                
+                <div class="skill-card">
+                    <img src="images/javascript-logo.webp" alt="JavaScript Logo">
+                    <p>JavaScript</p>
+                    <span class="skill-level">Beginner | 1 year</span>
+                </div>
+                
+                <div class="skill-card">
+                    <img src="images/Python-logo-notext.svg.png" alt="Python Logo">
+                    <p>Python</p>
+                    <span class="skill-level">Beginner | 1 year</span>
+                </div>
+            </section>
+        </div>    
+
+        <div class="projects-section">
+            <h2>Projects</h2>
+        
+            <div class="project">
+                <h3>Research on Open Access Educational Resources</h3>
+                <p>Analyzed student performance data using IBM SPSS and helped evaluate the impact of free educational resources.</p>
+                <a href="research-link" class="btn">Read More</a>
+            </div>
+        
+            <div class="project">
+                <h3>Portfolio Website</h3>
+                <p>Designed and built this portfolio using HTML, CSS, and JavaScript to showcase my work.</p>
+                <a href="https://github.com/yourgithub/portfolio" class="btn">View Code</a>
+            </div>
+        
+            <div class="project">
+                <h3>Car Price Estimator</h3>
+                <p>Developed a car price estimator using machine learning to predict vehicle prices.</p>
+                <a href="https://github.com/yourgithub/car-estimator" class="btn">GitHub</a>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+    </main>
+
+
+
+
+    <footer class="mainFooter">
+        Author: Brensss Galdamez<br>
+        &copy; Copyright Reserved<br>
+        <small><a href="mailto:jgaldamez098@gmail.com">jgaldamez098@gmail.com</a></small>
+    </footer>
+    
+
+    <!-- Custom JS for Particle Animation -->
+    <script>
+      particlesJS("particles-js", {
+            particles: {
+                number: { value: 80 },                                    
+                size: { value: 3 },
+                move: { speed: 2 },
+                opacity: { value: 0.5 }
+            },
+                interactivity: {
+                events: {
+                    onhover: { enable: true, mode: "repulse" }
+                }
+                }
+            });
+    </script>
+</body>
+</html>

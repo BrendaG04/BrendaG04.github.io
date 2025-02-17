@@ -3,68 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="images/jpg" href="images/emociones.jpg" >
-    <title>BrenWeb</title>
+    <link rel="icon" type="images/png" href="images/brenware-high-resolution-logo-transparent (1).png" >
+    <title>BrenWare</title>
     <link rel="stylesheet" href="style.css">
-
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-
+    <script src="https://kit.fontawesome.com/fa5ca6f968.js" crossorigin="anonymous"></script>
 </head>
-
 <body >
-
     <div id="particles-js"></div>
+
     <header class="mainHeader">
-        <h5> < BrenWeb > </h5>
-            <nav class="navbar">
-                <ul>
-                    <li><a href="main.html">Home</a></li>
-                    <li><a href="aboutus.html">About Me</a></li>
-                    <li><a href="products.html">Projects</a></li>
-                    <li><a href="contactus.html">Contact Info</a></li>
-                </ul>
-            </nav>
-            <hr>
+        <nav class="navbar">
+            <h2> <img src="images/brenware-high-resolution-logo-transparent (1).png"></h2>
+            <ul>
+                <li><a href="main.html">Home</a></li>
+                <li><a href="projects.html" >Projects</a></li>
+                 <li><a href="gallery.html" >Gallery</a></li>
+            </ul>
+        </nav>
+            <img src="images/gradPic.jpeg"  alt="Profile Picture" height="200"></img>
+            <h1> Hey!! Welcome to my portfolio website</h1>
+            <h1> I'm <big><mark style="background-color: #ffcc70;">Brenda</mark></big></h1>
     </header>
-    
-            <!-- Include particles.js -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
-    <main>
-        <image src="Images/Chatgpt1.webp"  alt="Profile Picture" height="200"></image>
+    <main class="mainContent">
 
-        <h2> Hey, I'm Brenda. 
-         
-        </h2>
+    <div class="divAM">
+        <section class="aboutMe">
+            <img src="images/Chatgpt1.webp" height="250px" id="img1">
+            <h2>About Me</h2>
+            <p>I am Computer Science student at Farmingdale State College with a passion for software engineering, research, and problem-solving. </p>
+            <p>I enjoy working on projects that challenge me, I'm currently exploring data structures, backend development, and augmented reality.</p>
+        </section>
+    </div>
 
-    <!-- Custom JS for Particle Animation -->
-    <script>
-        particlesJS("particles-js", {
-            particles: {
-                number: { value: 80 },
-                size: { value: 3 },
-                move: { speed: 2 },
-                opacity: { value: 0.5 }
-            },
-            interactivity: {
-                events: {
-                    onhover: { enable: true, mode: "repulse" }
-                }
-            }
-        });
-    </script>
+        <br>
+        <br>
+        <br>
+        <br>  
+
+
+
+        <br>
+        <br>
+        <br>
+        <br>  
+
+    <div class="divCM">
+        <section class="contact">
+            <h2>Contact Information</h2>
+            <p>Let's connect! Reach me via: </p>
+                <!--Icons in ContactUs page-->
+            <div class="icons">
+                <a href="mailto:jgaldamez098@gmail.com" title="Email">
+                    <i class="fa-solid fa-envelope fa-3x" style="color: #ffffff;"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/brenda-galdamez-066500288" target="_blank" title="LinkedIn">
+                    <i class="fa-brands fa-linkedin fa-3x" style="color: #0077b5;"></i>
+                </a>
+            </div>
+        </section>
+    </div>
+
 
     </main>
 
 
     <footer class="mainFooter">
-        <hr>
-        Author: Brensss Galdamez<br>
+        Author: Brenda Galdamez<br>
         &copy; Copyright Reserved<br>
         <small><a href="mailto:jgaldamez098@gmail.com">jgaldamez098@gmail.com</a></small>
     </footer>
     
+
+    <!-- Custom JS for Particle Animation -->
+    <script>
+      particlesJS("particles-js", {
+            particles: {
+                number: { value: 80 },                                    
+                size: { value: 3 },
+                move: { speed: 2 },
+                opacity: { value: 0.5 }
+            },
+                interactivity: {
+                events: {
+                    onhover: { enable: true, mode: "repulse" }
+                }
+                }
+            });
+    </script>
 </body>
-
-
 </html>

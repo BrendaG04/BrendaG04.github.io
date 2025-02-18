@@ -13,9 +13,9 @@ html , body {
 
 /*Particle background animation*/
 @keyframes gradientBackground {
-    0% { background: #1e3c72; }
-    50% { background: #1b4965; }
-    100% { background: #2a5298 ; }
+    0% { background: #1b4965; }
+    50% { background: #1b4763; }
+    100% { background: #1c4965 ; }
 }
 #particles-js{
     position: fixed;
@@ -101,9 +101,9 @@ html , body {
 .divAM{
     flex: 1;
     background-color: rgba(255, 255, 255, 0.1);
-    padding: 20px;
+    padding: 25px;
     border-radius: 10px;
-    margin: 20px;
+    margin: 10px;
     backdrop-filter: blur(10px);
     box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
     position: relative;
@@ -111,12 +111,12 @@ html , body {
 }
 .aboutMe h2{
     text-align: left;
-    font-size: 36px;
+    font-size: 30px;
     color: #ffcc70;
 }
 .aboutMe p{
     text-align: left;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 1.6;
     margin: 20px 0;
 }
@@ -124,90 +124,162 @@ html , body {
     float: right;
     margin-left: 10px;
 }
+.amongUsContainer {
+    position: absolute;
+    left: 10%;
+    transform: translate(-40%, -40%);
+}
+#amongUsCharacter {
+    width: 70px;
+    animation: floatAnimation 3s ease-in-out infinite;
+}
+@keyframes floatAnimation {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
 /*END About me Div*/
 
 
-/*Skills Div*/
-.divSkills {
-    text-align: center;
+
+
+
+/*Education Div*/
+.education {
+    max-width: 600px;
+    margin: auto;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    margin: 20px;
-    backdrop-filter: blur(10px);
-    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
 }
-.skills h2 {
-    font-size: 36px;
+.education h2 {
     color: #ffcc70;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
     margin-bottom: 20px;
 }
-.skill-card {
+.timeline {
+    position: relative;
+    padding-left: 20px;
+}
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 8px;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: #888;  /* Adjust color to match your theme */
+}
+.edu-item {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 15px;
+    margin-bottom: 20px;
+    position: relative;
+}
+.dot {
+    width: 12px;
+    height: 12px;
+    background: #ffcc00; /* Adjust to match your color theme */
+    border-radius: 50%;
+    position: absolute;
+    left: 2px;
+}
+.edu-content {
+    background: rgba(255, 255, 255, 0.1); /* Light background for contrast */
+    padding: 10px 15px;
     border-radius: 8px;
-    background: rgba(255, 255, 255, 0.1);
-    margin: 10px 0;
-    transition: transform 0.3s ease-in-out;
+    margin-left: 25px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+    
 }
-.skill-card:hover {
-    transform: scale(1.05);
-    background: rgba(255, 255, 255, 0.568);
-}
-
-.skill-card img {
-    height: 50px;
-    width: auto;
-    margin-left: 40px;
-}
-.skill-card #javaimg {
-    height: 70px;
-    width: auto;
-    margin-left: 0px;
-}
-.skill-card p {
-    flex: 1;
-    font-size: 24px;
-    color: white;
-}
-.skill-level {
-    font-size: 18px;
-    color: #ffcc70;
+.edu-content h3 {
+    font-size: 20px;
     font-weight: bold;
 }
-/*END skills Div*/
+.edu-content p {
+    font-size: 15px;
+    margin: 2px 0;
+}
+/*END education Div*/
+
+
+
+
+/*Languages Div*/
+.divLanguages {
+    justify-content: center ;
+    align-items: center;
+    flex: 1;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 12px;
+    margin: 10px ;
+    backdrop-filter: blur(12px);
+    box-shadow: 0px 4px 12px rgba(255, 255, 255, 0.2);
+    position: relative;
+}
+.languages h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #ffcc70;
+    margin-bottom: 10px;
+}
+.languages ul {
+    list-style: none;
+    padding: 0;
+}
+.languages li {
+    text-align: center;
+    font-size: 20px;
+    line-height: 1.6;
+    margin: 10px 0;
+    padding-left: 20px;
+    position: relative;
+    color: #fff;
+}
+/*END Languages Div*/
+
+
+
 
 
 /*Contact me Div*/
 .divCM{
     flex: 1;
     background-color: rgba(255, 255, 255, 0.1);
-    padding: 20px;
+    padding: 10px;
     border-radius: 10px;
-    margin: 20px;
+    margin: 10px;
     backdrop-filter: blur(10px);
     box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
     position: relative;
     z-index: 0;
 }
 .contact h2 {
-    padding: 10px;
+    padding: 0px;
     text-align: center;
-    font-size: 36px;
+    font-size: 24px;
     color: #ffcc70;
 }
 .contact a {
     text-align: center;
-    font-size: 27px;
+    font-size: 15px;
     text-decoration: none;
     font-weight: bold;
     color: #63b3f5;
 }
 .contact p {
     text-align: center;
-    font-size: 24px;
+    font-size: 15;
     text-decoration: none;
     font-weight: bold;
 }
@@ -228,27 +300,221 @@ html , body {
 }
 /*END Contact me Div*/
 
+/*END main body of Home page*/
 
 
 
-/*END main body*/
+/*Main body of Projects page*/
+/*Skills Div*/
+.divSkills {
+    flex: 1;
+    text-align: center;
+    position: relative;
+    padding: 25px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    margin: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+    z-index: 0;
+}
+.skills h2 {
+    font-size: 30px;
+    color: #ffcc70;
+    margin-bottom: 20px;
+}
+.skill-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 10px 0;
+    transition: transform 0.3s ease-in-out;
+}
+.skill-card:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.568);
+}
+.skill-card img {
+    height: 50px;
+    width: auto;
+    margin-left: 30px;
+}
+.skill-card #javaimg {
+    height: 60px;
+    width: auto;
+    margin-left: 0px;
+}
+.skill-card p {
+    flex: 1;
+    font-size: 20px;
+    color: white;
+}
+.skill-level {
+    font-size: 15px;
+    color: #ffcc70;
+    font-weight: bold;
+}
+/*END skills Div*/
+
+
+/*Tools & Frameworks*/
+.tools-frameworks {
+    text-align: center;
+    margin-top: 20px;
+}
+.tools-frameworks h2{
+    font-size: 30px;
+    color: #ffcc70;
+}
+.tool-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.tool {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 8px 12px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+    z-index: 0;
+}
+.tool img {
+    width: 24px;
+    height: auto;
+    margin-right: 8px;
+}
+/*END Tools & Frameworks*/
+
+
+/*Projects Display*/
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    grid-template-rows: repeat(2, 1fr); /* Two rows */
+    gap: 20px; /* Space between grid items */
+    max-width: 800px; /* Adjust as needed */
+    margin: auto;
+    padding: 20px;
+}
+.project {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+.projects-section h2{
+    color: #ffcc70;
+    text-align: center;
+    font-size: 30px;
+}
+.project h2 {
+    color: #ffcc70;
+    margin-bottom: 10px;
+}
+.project h3 {
+    color: #ffcc70;
+    margin-bottom: 10px;
+}
+.project p {
+    color: white;
+    font-size: 16px;
+}
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: #ffcc70;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+.btn:hover {
+    background: #ffa500;
+}
+/*END Projects Display*/
+
+
+
+/*END projects main body*/
+
+
 
 
 
 /* Gallery Section */
-.gallery-section {
+.galleryTitle h2{
     text-align: center;
-    padding: 30px;
+    font-size: 30px;
+    color: #ffcc70;
 }
-.gallery-item {
-    margin-bottom: 20px;
-}
-.gallery-item img {
-    width: 80%;
+.gallery {
+    text-align: center;
     max-width: 600px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
 }
+.gallery-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.gallery-description {
+    font-size: 16px;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+.image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.image-slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.image-slider img {
+    max-width: 100%;
+    display: none;
+    
+}
+.image-slider img.active {
+    display: block;
+}
+button.prev,
+button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #00000080;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 18px;
+}
+button.prev {
+    left: 10px;
+}
+button.next {
+    right: 10px;
+}
+button.prev:hover,
+button.next:hover {
+    background-color: #ffcc70;
+}
+
 /*END Gallery Style*/
 
 
@@ -256,7 +522,7 @@ html , body {
 /*Footer*/
 .mainFooter {
     text-align: center;
-    padding: 20px;
+    padding: 15px;
     background-color: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
     border-radius: 10px;
@@ -283,6 +549,10 @@ html , body {
     
         .gallery-item img {
             width: 100%;
+        }
+
+        .projects-grid {
+            grid-template-columns: 1fr; /* Stack into single column for small screens */
         }
     }
 }

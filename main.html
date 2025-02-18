@@ -22,8 +22,8 @@
             </ul>
         </nav>
             <img src="images/gradPic.jpeg"  alt="Profile Picture" height="200"></img>
-            <h1> Hey!! Welcome to my portfolio website</h1>
-            <h1> I'm <big><mark style="background-color: #ffcc70;">Brenda</mark></big></h1>
+            <h1> Hi there, welcome!</h1>
+            <h1> I'm <big>Brenda</big></h1>
     </header>
 
     <main class="mainContent">
@@ -32,22 +32,70 @@
         <section class="aboutMe">
             <img src="images/Chatgpt1.webp" height="250px" id="img1">
             <h2>About Me</h2>
-            <p>I am Computer Science student at Farmingdale State College with a passion for software engineering, research, and problem-solving. </p>
-            <p>I enjoy working on projects that challenge me, I'm currently exploring data structures, backend development, and augmented reality.</p>
+            <p>I am Computer Science student with a passion for software engineering, research, and problem-solving. </p>
+            <p>I enjoy working on projects that challenge me, I'm currently exploring data structures, backend development, and AI.</p>
+            <p>In my free time, I like playing games such as <strong>Roblox</strong> and <strong>Among Us</strong>. I also enjoy playing <strong>soccer</strong> and going for <strong>runs</strong>.</p>
         </section>
     </div>
 
-        <br>
-        <br>
-        <br>
-        <br>  
+    <div class="amongUsContainer">
+        <img src="images/CyanAmongUs.webp" id="amongUsCharacter" alt="Among Us Character">
+    </div>
 
 
+    <br>
+    <br>        
+    <br>
+    <br> 
 
-        <br>
-        <br>
-        <br>
-        <br>  
+    <div class="education">
+        <h2>Education</h2>
+        <div class="timeline">
+            <div class="edu-item">
+                <div class="dot"></div>
+                <div class="edu-content">
+                    <h3>Farmingdale State College</h3>
+                    <p>Bachelor of Science in Computer Science</p>
+                    <p>August 2023 - May 2027</p>
+                </div>
+            </div>
+            <div class="edu-item">
+                <div class="dot"></div>
+                <div class="edu-content">
+                    <h3>Westbury High School</h3>
+                    <p>High School Diploma</p>
+                    <p>Class of 2023</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>        
+    <br>
+    <br>
+    <br>  
+
+    <div class="divLanguages">
+        <section class="languages">
+            <h2>Languages</h2>
+            <ul>
+                <li>English</li>
+                <li>Spanish</li>
+                <li>French</li>
+            </ul>
+        </section>
+    </div>    
+    
+    <br>
+    <br>
+    <br>
+    <br>  
+
+
+    <br>
+    <br>
+    <br>
+    <br>  
 
     <div class="divCM">
         <section class="contact">
@@ -65,7 +113,6 @@
         </section>
     </div>
 
-
     </main>
 
 
@@ -76,9 +123,8 @@
     </footer>
     
 
-    <!-- Custom JS for Particle Animation -->
     <script>
-      particlesJS("particles-js", {
+        particlesJS("particles-js", {
             particles: {
                 number: { value: 80 },                                    
                 size: { value: 3 },
@@ -91,6 +137,14 @@
                 }
                 }
             });
+        
+        const character = document.getElementById("amongUsCharacter");
+            character.addEventListener("mouseenter", () => {
+            character.style.animationPlayState = "paused";
+        });
+            character.addEventListener("mouseleave", () => {
+            character.style.animationPlayState = "running";
+        });
     </script>
 </body>
 </html>

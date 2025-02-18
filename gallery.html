@@ -25,30 +25,42 @@
 
     <main class="mainContent">
 
-
-        <div class="gallery-section">
-            <h2>Gallery</h2>
         
-            <div class="gallery-item">
-                <img src="images/shpe.jpg" alt="SHPE Conference">
-                <p>Attended the SHPE National Conference where I connected with industry professionals and explored career opportunities.</p>
-            </div>
+    <div class="galleryTitle"> 
+        <h2>Gallery</h2>
+     </div>
         
-            <div class="gallery-item">
-                <img src="images/research.jpg" alt="Research Presentation">
-                <p>Presented my research on open-access educational resources at a college symposium.</p>
+    <div class="gallery">
+        <h3 class="gallery-title"> SHPE National Convention</h3>
+        <div class="image-container">
+            <button class="prev" onclick="changeImage(-1)">⬅</button>
+            <div class="image-slider">                    
+                <img src="images/SHPEdreamUS.jpeg" class="active" alt="Image 1">
+                <img src="images/SHPEgroup.jpeg" alt="Image 2">                    
+                <img src="images/SHPEme.jpeg" alt="Image 3">
             </div>
-        
-            <div class="gallery-item">
-                <img src="images/networking.jpg" alt="Networking Event">
-                <p>Networking event with entrepreneurs and professionals discussing software engineering trends.</p>
-            </div>
+            <button class="next" onclick="changeImage(1)">➡</button>
         </div>
+        <p class="gallery-description">A collection of moments from my experience at the SHPE National Convention, where I networked, learned, and grew as a professional.</p>
+    </div>
 
+    <br>
+    <br>    
+    <br>
+    <br>    
 
-
-
-
+    <div class="gallery">
+        <h3 class="gallery-title"> Summer Institue Research Undergraduate</h3>
+        <div class="image-container">
+            <button class="prev" onclick="changeImage(-1)">⬅</button>
+            <div class="image-slider">                    
+                <img src="images/suri.png" class="active" alt="Image 1">
+                <img src="images/suriImage.jpeg" alt="Image 2">                    
+            </div>
+            <button class="next" onclick="changeImage(1)">➡</button>
+        </div>
+        <p class="gallery-description">Me and my team research the impact of open-access educational resources on student performance, utilizing data analysis with IBM SPSS to evaluate academic outcomes.  </p>
+    </div>
 
 
 
@@ -84,6 +96,31 @@
                 }
                 }
             });
+
+    document.addEventListener("DOMContentLoaded", function () {
+    const sliders = document.querySelectorAll(".image-slider");
+
+    sliders.forEach((slider, index) => {
+            let images = slider.querySelectorAll("img");
+            let currentIndex = 0;
+
+            // Show the first image initially
+            images[currentIndex].classList.add("active");
+
+            function changeImage(direction) {
+                images[currentIndex].classList.remove("active");
+                currentIndex = (currentIndex + direction + images.length) % images.length;
+                images[currentIndex].classList.add("active");
+            }
+
+            // Assign event listeners to the respective buttons
+            let prevButton = slider.parentElement.querySelector(".prev");
+            let nextButton = slider.parentElement.querySelector(".next");
+
+            prevButton.addEventListener("click", () => changeImage(-1));
+            nextButton.addEventListener("click", () => changeImage(1));
+            });
+    });
     </script>
 </body>
 </html>

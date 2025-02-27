@@ -8,6 +8,20 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="https://kit.fontawesome.com/fa5ca6f968.js" crossorigin="anonymous"></script>
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+        <script type="text/javascript">
+        (function(){
+        emailjs.init({
+            publicKey: "9ugcCLCbk0GExhQw7",
+        });
+        })();
+    </script>
+    <script src="script.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
 </head>
 <body >
     <div id="particles-js"></div>
@@ -33,8 +47,10 @@
             <img src="images/Chatgpt1.webp" height="250px" id="img1">
             <h2>About Me</h2>
             <p>I am Computer Science student with a passion for software engineering, research, and problem-solving. </p>
-            <p>I enjoy working on projects that challenge me, I'm currently exploring data structures, backend development, and AI.</p>
-            <p>In my free time, I like playing games such as <strong>Roblox</strong> and <strong>Among Us</strong>. I also enjoy playing <strong>soccer</strong> and going for <strong>runs</strong>.</p>
+            <p>I love working on projects that challenge me, I'm currently diving into backend development, and exploring AI.</p>
+            <p>If technology can do something amazing, I neeeed to know about it!!!</p>
+            <p>Finance and investing have also always fascinated me, and I’ve been learning more about them in my own time. </p>
+            <p>Outside of tech, I like playing games such as <strong>Roblox</strong> and <strong>Among Us</strong>. I also enjoy playing <strong>soccer</strong> and going for <strong>runs</strong>.</p>
         </section>
     </div>
 
@@ -48,13 +64,14 @@
     <br>
     <br> 
 
+
     <div class="education">
         <h2>Education</h2>
         <div class="timeline">
             <div class="edu-item">
                 <div class="dot"></div>
                 <div class="edu-content">
-                    <h3>Farmingdale State College</h3>
+                    <h3>Farmingdale State College<img src="images/fsclogo.png"></h3>
                     <p>Bachelor of Science in Computer Science</p>
                     <p>August 2023 - May 2027</p>
                 </div>
@@ -62,11 +79,59 @@
             <div class="edu-item">
                 <div class="dot"></div>
                 <div class="edu-content">
-                    <h3>Westbury High School</h3>
+                    <h3>Westbury High School<img src="images/whslogo.png"></h3>
                     <p>High School Diploma</p>
                     <p>Class of 2023</p>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <br>
+    <br>        
+    <br>
+    <br> 
+
+    <div class="work">
+        <h2>Work Experience</h2>
+        <div class="timeline">
+
+            <div class="work-item">
+                <div class="dot"></div>
+                <div class="work-content">
+                    <h3>TechACS Safety Solutions <a href="https://techacs.com/" target="_blank"><img src="images/Techacs-og-image1.jpg" ></a></h3>
+                    <p>Technical Content & SEO Intern </p>
+                    <p>January 2025 - Present</p>
+                </div>
+            </div>
+
+            <div class="work-item">
+                <div class="dot"></div>
+                <div class="work-content">
+                    <h3>Hotel <img src="images/hotellogo.png"></h3>
+                    <p>Guest Service Agent </p>
+                    <p>June 2023 - Present</p>
+                </div>
+            </div>
+
+            <div class="work-item">
+                <div class="dot"></div>
+                <div class="work-content">
+                    <h3>McDonald's <img src="images/mcdonaldslogo.png"></h3>
+                    <p>Crew Member / Cashier</p>
+                    <p>November 2021 - June 2023</p>
+                </div>
+            </div>
+
+            <div class="work-item">
+                <div class="dot"></div>
+                <div class="work-content">
+                    <h3>Burger King<img src="images/bklogo.png"></h3>
+                    <p>Crew Member / Cashier</p>
+                    <p>March 2022 - November 2022</p>
+                </div>
+            </div>
+
         </div>
     </div>
 
@@ -109,12 +174,38 @@
                 <a href="https://www.linkedin.com/in/brenda-galdamez-066500288" target="_blank" title="LinkedIn">
                     <i class="fa-brands fa-linkedin fa-3x" style="color: #0077b5;"></i>
                 </a>
+                
+                <br>
+                <br>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name"></label>
+                        <input type="text" id="name" placeholder="Your Name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email"></label>
+                        <input type="email" id="email" placeholder="Your Email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject"></label>
+                        <input type="text" id="subject" placeholder="Your subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message"></label>
+                        <textarea id="message" placeholder="Your Message" row="4" name="message" required></textarea>
+                    </div>
+                    <button type="submit" onclick="sendMail()">Send</button>
+                </form>
             </div>
         </section>
     </div>
 
     </main>
 
+    <br>
+    <br>
+    <br>
+    <br>  
 
     <footer class="mainFooter">
         Author: Brenda Galdamez<br>
